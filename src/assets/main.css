@@ -1,0 +1,121 @@
+@import "./base.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.font-Lato{
+  font-family: 'Lato';
+}
+.font-Merriweather{
+  font-family: 'Merriweather';
+}
+.font-Roboto{
+  font-family: 'Roboto';
+}
+.btn-shadow{
+  box-shadow: -1px 7px 10px 0px rgb(209 2 2 / 50%);
+}
+.box-shadow{
+  box-shadow: 1px 1px 26px 0px rgb(23 23 23 / 10%);
+  border: 1px solid #d9d9d9;
+}
+.testimonia-shadow{
+  box-shadow: 5px 5px 30px 0px rgb(51 51 51 / 10%);
+}
+.testimonia-shadow:hover{
+  box-shadow: 2px 2px 20px 0px rgb(2 0 71 / 21%);
+}
+.text-shadow{
+  text-shadow: -9px 0px 13px rgb(0 0 0 / 63%);
+}
+.hero-pattern{
+  background-image: url(../assets/img/injpg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 41% auto;
+}
+.top-ring svg,
+.bottom-ring svg{
+  width: calc(200% + 1.3px);
+  height: 25px;
+  transform: translateX(-50%) rotateY(180deg);
+}
+.top-ring svg path,
+.bottom-ring svg path{
+  fill: #fff;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.bottom-ring{
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.elementor-background-overlay{
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #CECED8 0%, #E6E6E6 100%);
+  opacity: 0.35;
+}
+@media ( min-width: 2100px){
+  .dogjson,
+  .traficAnimation{
+    max-width: 760px;
+  }
+}
+@media ( min-width: 1025px){
+  .main-containar{
+    max-width: 1140px;
+    margin: auto;
+  }
+  .header ul li a:hover svg path{
+      fill: #DB0909;
+  }
+  .header ul li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+  }
+  .cus-arrow-btn:hover .icon-container {
+    transform: translateX(60%);
+  }
+  .cus-arrow-btn:hover .icon-container .icon--left {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .cus-arrow-btn:hover .icon-container .icon--right {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  .cus-arrow-btn:hover::after {
+    transform: translateX(78%);
+  }
+}
+@media ( max-width: 767px){
+  .hero-pattern{
+    background-image: none;
+  }
+  .menu-open{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-hover {
+    color: #DB0909;
+  }
+  .menu-hover svg path {
+    fill: #DB0909;
+  }
+  .menu-hover svg {
+    border-color: #DB0909;
+  }
+}
